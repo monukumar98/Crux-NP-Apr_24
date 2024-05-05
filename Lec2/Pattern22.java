@@ -28,14 +28,12 @@ public class Pattern22 {
 			while (k <= star) {
 				System.out.print("* ");
 				k++;
-
 			}
 			// next row Prep
 			System.out.println();
 			row++;
 			star--;
 			space += 2;
-
 		}
 
 	}
