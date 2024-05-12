@@ -25,7 +25,7 @@ public class Pattern27 {
 				} else {
 					val--;
 				}
-			
+
 				j++;
 			}
 			// next row prep
