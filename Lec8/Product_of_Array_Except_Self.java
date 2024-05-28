@@ -24,7 +24,7 @@ public class Product_of_Array_Except_Self {
 		for (int i = n - 2; i >= 0; i--) {
 			right[i] = right[i + 1] * arr[i + 1];
 		}
-		for (int i = 0; i < right.length; i++) {
+		for (int i = 0; i < n; i++) {
 			left[i] = left[i] * right[i];
 		}
 		return left;
