@@ -11,7 +11,8 @@ public class Stack_client {
 		st.push(40);
 		st.push(50);
 		System.out.println(st.peek());// 50
-		st.push(60);
+		st.Display();
+		//st.push(60);
 		
 	}
 
