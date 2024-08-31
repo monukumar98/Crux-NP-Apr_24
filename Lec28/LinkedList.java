@@ -74,4 +74,63 @@ public class LinkedList {
 		return temp;
 	}
 
+	// O(1)
+	public int getFirst() {
+		return head.val;
+	}
+
+	// O(1)
+	public int getlast() {
+		return tail.val;
+	}
+
+	// O(N)
+	public int getatindex(int k) {
+		return GetNode(k).val;
+	}
+
+	public int removeFirst() {
+		int val = head.val;
+		if (size == 1) {
+			head = null;
+			tail = null;
+			size--;
+		} else {
+			Node temp = head;
+			head = head.next;
+			temp.next = null;
+			size--;
+		}
+		return val;
+	}
+
+	public int removelast() {
+		if (size == 1) {
+			return removeFirst();
+		} else {
+			Node prev = GetNode(size - 2);
+			int v = tail.val;
+			tail = prev;
+			tail.next = null;
+			size--;
+			return v;
+		}
+	}
+
+	public int removeatindex(int k) {
+		if (k == 0) {
+			return removeFirst();
+		} else if (k == size - 1) {
+			return removelast();
+		} else {
+			Node prev = GetNode(k - 1);
+			Node curr = GetNode(k);
+			prev.next = curr.next;
+			curr.next = null;
+			size--;
+			return curr.val;
+
+		}
+	}
+
 }
