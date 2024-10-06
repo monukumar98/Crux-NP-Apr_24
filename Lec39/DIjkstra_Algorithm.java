@@ -71,7 +71,7 @@ public class DIjkstra_Algorithm {
 			for (int nbrs : map.get(rp.vtx).keySet()) {
 				if (!visited.contains(nbrs)) {
 					int cost = map.get(rp.vtx).get(nbrs);
-					pq.add(new DijkstraPair(nbrs, rp.acqpath + rp.vtx, rp.cost + cost));
+					pq.add(new DijkstraPair(nbrs, rp.acqpath + nbrs, rp.cost + cost));
 				}
 			}
 
