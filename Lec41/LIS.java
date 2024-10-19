@@ -21,6 +21,6 @@ public class LIS {
 				}
 			}
 		}
-		return Arrays.stream(arr).max().getAsInt();
+		return Arrays.stream(dp).max().getAsInt();
 	}
 }
